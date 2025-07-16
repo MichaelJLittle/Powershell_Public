@@ -30,7 +30,7 @@ Test-Connection -Count 4 google.com, homedepot.com | Out-File $ConnectionResults
 Test-Connection -Count 1 TB-NMS | Out-File $ConnectionResults -Append
 
 # Open the results
-# Start-Process notepad.exe $ConnectionResults
+Start-Process notepad.exe $ConnectionResults
 
 
 
