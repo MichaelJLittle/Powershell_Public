@@ -1,6 +1,4 @@
-﻿# Connection Tester 3,000
-
-$ConnectionFolder = "C:\Users\Mike\Desktop\ConnectionLog"
+﻿$ConnectionFolder = "C:\Users\MichaelLittle\Desktop\ConnectionLog"
 
 
 # Make sure the folder exists
@@ -12,7 +10,7 @@ if (-not (Test-Path $ConnectionFolder)) {
 
 
 
-while($true) { 
+while($true) {
 
 $GetDate = Get-Date -Format "yyyy-MM-dd_HH-mm-ss"
 $ConnectionResults = "$ConnectionFolder\Connectionresults_$GetDate.txt"
@@ -29,11 +27,13 @@ Test-Connection -Count 4 google.com, homedepot.com | Out-File $ConnectionResults
 
 # Extra target
 "Sending test to chatgpt.com" | Out-File $ConnectionResults -Append
-Test-Connection -Count 1 chatgpt.com | Out-File $ConnectionResults -Append
+Test-Connection -Count 1 TB-NMS | Out-File $ConnectionResults -Append
 
 # Open the results
 # Start-Process notepad.exe $ConnectionResults
 
-Start-Sleep -Seconds 300
+
+
+Start-Sleep -Seconds 600
 
 } 
