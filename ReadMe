@@ -1,0 +1,7 @@
+
+- Monitors a specific network drive (e.g., `U:`).
+- Sends weekly updates if free space is **above** threshold (default: `10 GB`).
+- Sends alerts if free space is **below** the threshold.
+- Uses SendGrid SMTP service to send emails securely.
+- Designed to run unattended via Windows Task Scheduler.
+- Mounts the network drive at runtime to ensure drive availability.
