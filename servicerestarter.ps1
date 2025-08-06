@@ -1,4 +1,6 @@
-﻿
+# The point of this script is to auto-restart services if they are not running, and log them in the C: drive. 
+#I made this because we had a service that was randomly failing in a production DB server, and we needed it 
+#to auto restart itself while we discovered the root cause
 $servicelog = "C:\Servicelog.txt"
 $Date  = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
 
@@ -28,3 +30,4 @@ while ($true) {
     # Pause before next check
     Start-Sleep -Seconds 1
 }
+
