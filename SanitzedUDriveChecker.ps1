@@ -1,4 +1,4 @@
-﻿
+#This I setup to check space on a network drive. It does some math and sends out email reports if it's too full﻿
 
 $DeviceID = 'U' #This defines the drive we are looking for, might be redudnant 
 
@@ -59,5 +59,6 @@ Send-MailMessage -From "sender@gmail.com" `
 }
 
 #  I set this up to run weekly on Task Scheduler after, otherwise you can background this process as needed. 
+
 
 
